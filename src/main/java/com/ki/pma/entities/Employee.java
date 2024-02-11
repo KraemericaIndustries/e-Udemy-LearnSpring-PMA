@@ -3,6 +3,8 @@ package com.ki.pma.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Employee {
@@ -13,6 +15,9 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String email;
+	@ManyToOne
+	@JoinColumn(name = "project_id")
+	private Project theProject;
 	
 	
 	public Employee() {

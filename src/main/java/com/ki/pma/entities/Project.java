@@ -1,9 +1,12 @@
 package com.ki.pma.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Project {
@@ -14,6 +17,8 @@ public class Project {
 	private String name;
 	private String stage;  //  NOTSTARTED, COMPLETED, INPROGRESS
 	private String description;
+	@OneToMany(mappedBy = "theProject")
+	private List<Employee> employees;
 	
 	public Project() {
 	}
