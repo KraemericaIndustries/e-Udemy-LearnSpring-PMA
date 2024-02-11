@@ -17,7 +17,7 @@ public class Project {
 	private String name;
 	private String stage;  //  NOTSTARTED, COMPLETED, INPROGRESS
 	private String description;
-	@OneToMany(mappedBy = "theProject")
+	@OneToMany(mappedBy = "project")
 	private List<Employee> employees;
 	
 	public Project() {
@@ -29,12 +29,15 @@ public class Project {
 		this.stage = stage;
 		this.description = description;
 	}
-	public long getProjectId() {
-		return projectId;
+	
+	public List<Employee> getEmployees() {
+		return employees;
 	}
-	public void setProjectId(long projectId) {
-		this.projectId = projectId;
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
 	}
+
 	public String getName() {
 		return name;
 	}
