@@ -51,14 +51,14 @@
 					<tr>
 						<th> First Name </th>
 						<th> Last Stage </th>
-						<th> Email Address </th>
+						<th> Project Count </th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each = "aEmployee : ${employeesList}">
-						<td th:text="${aEmployee.firstName}"/>
-						<td th:text="${aEmployee.lastName}"/>
-						<td th:text="${aEmployee.email}"/>
+					<tr th:each = "aEmployeeProjectCnt : ${employeesListProjectsCnt}">
+						<td th:text="${aEmployeeProjectCnt.firstName}"/>
+						<td th:text="${aEmployeeProjectCnt.lastName}"/>
+						<td th:text="${aEmployeeProjectCnt.projectCount}"/>
 					</tr>
 				</tbody>
 			</table>		
