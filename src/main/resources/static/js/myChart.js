@@ -7,7 +7,7 @@ var numericData = [];
 var labelData = [];
 
 for(var i = 0; i < arrayLength; i++) {
-	numericData[i] = chartJsonArray[i].value;
+	numericData[i] = chartJsonArray[i].item;
 	labelData[i] = chartJsonArray[i].label;
 }
 
