@@ -25,7 +25,6 @@ new Chart(document.getElementById("myPieChart"), {
 	},
 	// Configuration options go here
 	options: {
-		
 		title: {
 			display: true,
 			text: 'Project Statuses' 

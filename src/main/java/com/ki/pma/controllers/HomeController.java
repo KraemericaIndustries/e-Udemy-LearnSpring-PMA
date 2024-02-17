@@ -29,7 +29,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String displayHome(Model model) throws JsonProcessingException {
 
-		Map<String, Object> map = new HashMap<>();
+//		Map<String, Object> map = new HashMap<>();
 		
 		//  Query the database for projects
 		List<Project> projects =  proRepo.findAll();
