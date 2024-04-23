@@ -17,11 +17,11 @@ import com.ki.pma.entities.Employee;
 public class EmployeeController {
 	
 	@Autowired
-	EmployeeRepository empRepo;
+	EmployeeRepository empService;
 	
 	@GetMapping
 	public String displayEmployees(Model model) {
-		List<Employee> employees = empRepo.findAll();
+		List<Employee> employees = empService.findAll();
 		model.addAttribute("employees", employees);
 		return "employees/list-employees";
 	}
@@ -40,7 +40,7 @@ public class EmployeeController {
 	public String createEmployee(Model model, Employee employee) {
 		//  save to the database using an employee crud repository
 	
-		empRepo.save(employee);
+		empService.save(employee);
 		return "redirect:/employees/new";
 	}
 }
